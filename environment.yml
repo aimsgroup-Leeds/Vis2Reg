@@ -1,4 +1,4 @@
-name: uniregnet
+name: vis2reg
 channels:
   - pytorch
   - nvidia

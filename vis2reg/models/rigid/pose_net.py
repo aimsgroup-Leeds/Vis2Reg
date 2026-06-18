@@ -5,7 +5,7 @@ from typing import Optional, Tuple
 import torch
 from torch import nn
 
-from uniregnet.utils.geometry import se3_from_params
+from vis2reg.utils.geometry import se3_from_params
 
 
 class RigidScaleHead(nn.Module):

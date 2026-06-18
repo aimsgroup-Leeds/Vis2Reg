@@ -5,7 +5,7 @@ from typing import Optional, Tuple
 import torch
 from torch import nn
 
-from uniregnet.utils.geometry import apply_transform
+from vis2reg.utils.geometry import apply_transform
 
 
 class PositionalEncoding(nn.Module):

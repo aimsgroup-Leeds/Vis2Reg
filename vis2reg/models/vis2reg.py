@@ -18,10 +18,10 @@ from .rigid.weighted_svd_solver import WeightedSVDSolver
 from .rigid.ransac_icp import robust_pose_from_soft_matches
 from .local_matcher import local_matcher_forward
 from .renderer.point_renderer import PointsSilhouetteRenderer
-from uniregnet.utils.geometry import apply_transform
-from uniregnet.utils.logger import get_logger
+from vis2reg.utils.geometry import apply_transform
+from vis2reg.utils.logger import get_logger
 
-class UnifiedRegistrationNetwork(nn.Module):
+class Vis2Reg(nn.Module):
     def __init__(self, cfg):
         super().__init__()
         model_cfg = getattr(cfg, 'model', {})
@@ -227,7 +227,7 @@ class UnifiedRegistrationNetwork(nn.Module):
         self.local_logit_scale_log = nn.Parameter(torch.log(torch.tensor(local_logit_scale_init)))
         self.match_coarse_points = int(rigid_cfg.get('match_coarse_points', 1024))
         self.rigid_solver = WeightedSVDSolver()
-        self.logger = get_logger('UniRegNet')
+        self.logger = get_logger('Vis2Reg')
         self.logger.info('Decoupled rigid mode: %s', 'ON' if self.use_decoupled_rigid else 'OFF')
         if self.svd_conf_filter_enabled:
             self.logger.info(

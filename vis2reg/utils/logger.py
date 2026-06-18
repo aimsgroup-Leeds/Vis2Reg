@@ -5,7 +5,7 @@ from pathlib import Path
 _LOGGERS = {}
 
 
-def get_logger(name: str = 'uniregnet', log_file: str | None = None):
+def get_logger(name: str = 'vis2reg', log_file: str | None = None):
     if name in _LOGGERS:
         return _LOGGERS[name]
 
