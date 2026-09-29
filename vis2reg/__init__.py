@@ -1,3 +1,1 @@
-from .models import Vis2Reg
-
-__all__ = ["Vis2Reg"]
+"""Vis2Reg 论文结构稿；不是官方实现，未运行或验证。"""

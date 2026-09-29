@@ -1,0 +1,4 @@
+# Only the tensor/interface dependency of this structural draft.
+# No dependencies were installed; versions and runtime compatibility are unverified.
+torch
+# A differentiable point-rasterization backend (e.g. PyTorch3D) remains unbound.

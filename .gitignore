@@ -23,5 +23,5 @@ slurm-*.out
 *.err
 *.log
 
-data/
-datasets/
+/data/
+/datasets/
